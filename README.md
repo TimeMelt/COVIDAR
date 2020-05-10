@@ -12,8 +12,7 @@ Look inside the Screenshots folder to check out the UI.
 
 #### Download App
 
-    Android: https://mega.nz/file/tlQAjaDJ#VMn4JJgrMSdfXQ9ckCKs4iaXQ1LTmJgnt4t5Tk99OvY
-    iOS: coming soon...
+Android: https://mega.nz/file/tlQAjaDJ#VMn4JJgrMSdfXQ9ckCKs4iaXQ1LTmJgnt4t5Tk99OvY
 
 #### Enviornment setup:
 
