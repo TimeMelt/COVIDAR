@@ -27,6 +27,16 @@ export const styles = StyleSheet.create({
     today_widget: {
       flex: 1,
       margin: 3,
+      backgroundColor: '#FFC107'
+    },
+    active_widget: {
+      flex: 1,
+      margin: 3,
+      backgroundColor: '#E91E63'
+    },
+    critical_widget: {
+      flex: 1,
+      margin: 3,
       backgroundColor: '#FF3D00'
     },
     world_text: {
@@ -42,5 +52,11 @@ export const styles = StyleSheet.create({
       flex: 1,
       padding: 5,
       backgroundColor: '#263238',
-    }
+    },
+    fab: {
+      position: 'absolute',
+      margin: 16,
+      right: 0,
+      bottom: 20,
+    },
   });
