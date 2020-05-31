@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 export const styles = StyleSheet.create({
     container: {
       flex: 1,
@@ -32,7 +32,7 @@ export const styles = StyleSheet.create({
     active_widget: {
       flex: 1,
       margin: 3,
-      backgroundColor: '#E91E63'
+      backgroundColor: '#7b1fa2' //#E91E63
     },
     critical_widget: {
       flex: 1,
@@ -59,4 +59,11 @@ export const styles = StyleSheet.create({
       right: 0,
       bottom: 20,
     },
+    mapStyle: {
+      width: Dimensions.get('window').width,
+      height: Dimensions.get('window').height,
+    },
+    label: {
+      alignContent: 'center',
+    }
   });

@@ -7,7 +7,7 @@ export function invoke(url) {
     return req;
 }
 
-// set timeout
+// set timeout/wait duration
 export function wait(timeout) {
     return new Promise(resolve => {
       setTimeout(resolve, timeout);

@@ -6,8 +6,9 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { invoke, wait } from './request.js';
 import { Surface, Card, Divider} from 'react-native-paper';
-import { Continent_Table, Country_Table, State_Table } from './charts.js';
+import { Continent_Table, Country_Table, State_Table, Country_Details, State_Details, Global_Line_Chart } from './charts.js';
 import { styles } from './styles.js';
+import { NavRef } from './router/Router.js';
 
 const Stack = createStackNavigator(); // Create Main Navigator
 const Tab = createMaterialBottomTabNavigator(); // Create Tab Navigator
@@ -15,9 +16,11 @@ const Tab = createMaterialBottomTabNavigator(); // Create Tab Navigator
 // Main Router
 export default function Router() {
   return (
-    <NavigationContainer>
+    <NavigationContainer ref={NavRef}>
       <Stack.Navigator>
         <Stack.Screen name="COVIDAR" component={MainTabs} options={{ headerStyle: {backgroundColor: '#78909C'}}}/>
+        <Stack.Screen name='Country Details' component={Country_Details} options={{ headerStyle: {backgroundColor: '#78909C'}}}/>
+        <Stack.Screen name='State Details' component={State_Details} options={{ headerStyle: {backgroundColor: '#78909C'}}}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -28,7 +31,7 @@ function MainTabs() {
   return (
     <Tab.Navigator barStyle={{ backgroundColor: '#78909C' }} >
       <Tab.Screen name="World" component={WorldInfo} options={{ tabBarIcon: ({ color }) => (<MaterialCommunityIcons name="earth" color={color} size={26} />)}}/>
-      <Tab.Screen name="Countries" component={CountryInfo} options={{tabBarIcon: ({ color }) => (<MaterialCommunityIcons name="map" color={color} size={26} />)}}/>
+      <Tab.Screen name="Countries" component={CountryInfo} options={{tabBarIcon: ({ color }) => (<MaterialCommunityIcons name="pin" color={color} size={26} />)}}/>
       <Tab.Screen name="States" component={StateInfo} options={{tabBarIcon: ({ color }) => (<MaterialCommunityIcons name="flag" color={color} size={26} />)}}/>
     </Tab.Navigator>
   );
@@ -92,6 +95,7 @@ const WorldInfo = () => {
             </Card>
           </Card.Actions>
         </Card>
+        <Global_Line_Chart />
         <Text>{'\n'}</Text>
         <Continent_Table />
         <Text>{'\n'}</Text>
