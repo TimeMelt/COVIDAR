@@ -13,7 +13,7 @@ import { NavRef } from './router/Router.js';
 const Stack = createStackNavigator(); // Create Main Navigator
 const Tab = createMaterialBottomTabNavigator(); // Create Tab Navigator
 
-// Main Router
+// Main Navigator
 export default function Router() {
   return (
     <NavigationContainer ref={NavRef}>

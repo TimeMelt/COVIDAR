@@ -16,8 +16,8 @@ export function Global_Line_Chart() {
   function fetchdata() {
     const res = invoke(url).then(function (response) {
       var cases = response.data.cases;
-      setCasesData(Object.values(cases));
-      setCases(Object.keys(cases));
+      setCasesData(Object.values(cases)); // set Y axis values
+      setCases(Object.keys(cases)); // set X axis values
     })
     .catch(function (error) { console.error(error) })
     return res;
@@ -146,8 +146,8 @@ export function Country_Details() {
   function fetchdata() {
       const res = invoke(url).then(function (response) {
         var rr = response.data.timeline.cases;
-        setData(Object.values(rr));
-        setData2(Object.keys(rr));
+        setData(Object.values(rr)); // set Y axis values
+        setData2(Object.keys(rr)); // set X axis values
       })
       .catch(function (error) { console.error(error) })
       return res;

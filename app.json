@@ -15,7 +15,6 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    
     "updates": {
       "fallbackToCacheTimeout": 0
     },
@@ -30,6 +29,8 @@
     "android": {
       "package": "com.covidar.covidar",
       "versionCode": 1
-    }
+    },
+    "description": "",
+    "githubUrl": "https://github.com/slidershock/COVIDAR"
   }
 }
