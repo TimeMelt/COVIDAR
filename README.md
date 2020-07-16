@@ -14,7 +14,7 @@ Look inside the Screenshots folder to check out the UI.
 
 Android: https://mega.nz/file/tlQAjaDJ#VMn4JJgrMSdfXQ9ckCKs4iaXQ1LTmJgnt4t5Tk99OvY
 
-#### Run on Expo app
+#### Expo Testing
 
     Download Expo app from app store then use link to run (or scan QR code from Screenshots folder).
     App Link: exp://exp.host/@slidershock/covidar
